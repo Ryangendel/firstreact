@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://unpkg.com/react@16.3.1/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@16.3.1/umd/react-dom.production.min.js'>    </script>
+    <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+</head>
+
+<body>
+  
+    <div id='root'></div>
+  
+    <script type='text/babel'>
+
+        const Dog = (props) =>{
+            console.log("-------")
+            console.log(props)
+            console.log("-------")
+            return(
+                <div>
+                    {props.dogName} component whose weight is {props.dogWeigth} and has a caretaker of {props.dogCaretaker} and apple = {props.apple}
+                </div>
+            )
+        }
+
+        const App = () => {
+
+            return (
+                <div>   
+                    <Dog dogName={"Runa"} dogWeigth={140} dogCaretaker={"Ryna"} apple={"banana"}/>
+                    hello world!!!!
+                </div>
+            )
+        }
+
+
+        ReactDOM.render(<App/>, document.querySelector('#root'));
+    </script>
+</body>
+
+</html>
